@@ -1,0 +1,81 @@
+.explanationIn {
+  animation: explanationIn 0.4s ease-in forwards;
+}
+@keyframes explanationIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-2vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.explanationOut {
+  animation: explanationOut 0.4s ease-in forwards;
+}
+@keyframes explanationOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0vh);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2vh);
+  }
+}
+
+
+.explanationBox {
+  display: none;
+  position: fixed;
+  margin-left: 10vw;
+  margin-top: 9vh;
+  width: 40vw;
+  height: 80vh;
+  /* height: 40vw; */
+  padding: 3vw;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.692);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.555);
+  /* animation: explanationIn 0.5s 4s ease-out forwards; */
+}
+
+.explanation {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.date {
+  text-align: initial;
+}
+.title {
+  margin: 2vh auto;
+  text-align: initial;
+  /* display: initial;
+  opacity: 1;
+  transform: translateX(20vw);
+  position: relative;
+  z-index: 100; */
+}
+/* .date {
+  ↓これなんでうまくいってるか分からないや
+  position: absolute;
+  left: 0vw;
+  bottom: 0;
+  margin: 4px;
+} */
+.lyrics-box {
+  font-size: 1vw;
+  height: 81%;
+  text-align: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+}
+.lyrics-box::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
+}
+

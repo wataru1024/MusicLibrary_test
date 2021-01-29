@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="loading.css">
+  <link rel="stylesheet" href="opening.css">
+  <link rel="stylesheet" href="libraryBox.css">
+  <link rel="stylesheet" href="explanationBox.css">
+  <link rel="stylesheet" href="controller.css">
+  <title>Hello World</title>
+</head>
+<body>
+
+  <!-- <div id="js-loader" class="loader">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+    <h1>ローディングなう</h1>
+  </div> -->
+
+  <!-- <p id="RealtimeClockArea">※ここに時計が表示されます。</p> -->
+  <div class="opening">
+    <div class="light-black">
+      <div class="top-title">
+        <span class="im">I'm </span>
+        <p class="im-h">わたるだよ</p>
+        <span class="here">here </span>
+        <p class="here-h">ここは僕とあなたで作った曲が聴ける場所</p>
+        <span class="foryou">for you </span>
+        <p class="foryou-h">かけがえのない大切なあなたへ<br>笑うことを忘れないでね(o^―^o)</p>
+      </div>
+      <div class="box-1">
+        <div class="btn-one">
+          <span>　Listen Music →　</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="libraryBox">
+      <div class="library ">
+        <div class="musics">
+          <div class="m" id="m1"></div>
+          <div class="m" id="m2"></div>
+          <div class="m" id="m3"></div>
+          <div class="m" id="m4"></div>
+          <div class="m" id="m5"></div>
+          <div class="m" id="m6"></div>
+          <div class="m" id="m7"></div>
+          <div class="m" id="m8"></div>
+          <div class="m" id="m9"></div>
+          <div class="m" id="m10"></div>
+        </div>
+        <div class="library-trigger">
+          <div class="library-trigger-btn"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="explanationBox">
+      <div class="explanation">
+        <p class="date">2020/12/13</p>
+        <h1 class="title">夕焼け</h1>
+        <div class="lyrics-box">
+          <h3 class="lyrics">
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            おーいえー、あーいえー、いえー！！<br>
+            aーいえー、あーいえー、いえー！！<br>
+            bーいえー、あーいえー、いえー！！<br>
+            cーいえー、あーいえー、いえー！！<br>
+            dーいえー、あーいえー、いえー！！<br>
+            eーいえー、あーいえー、いえー！！<br>
+            fーいえー、あーいえー、いえー！！<br>
+            gーいえー、あーいえー、いえー！！<br>
+            hーいえー、あーいえー、いえー！！<br>
+            iーいえー、あーいえー、いえー！！<br>
+            jーいえー、あーいえー、いえー！！<br>
+            kーいえー、あーいえー、いえー！！<br>
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="rightPart">
+      <div class="sText">SELECT MUSIC</div>
+
+      <div class="p-card">
+        <div class="p-card__inner">
+           <img class="musicImg p-card__front" src="library/bgi-2.jpg" alt="">
+          <div class="p-card__back">
+            <p>実は～</p>
+            <p>この曲作った時～</p>
+            <p>あの有名な～～</p>
+            <p>世界的にも活躍してる～</p>
+            <p>あ、待って宅急便きた</p>
+            <p>はーい！今行きまーす！！</p>
+            <p>ありがとうございます～</p>
+            <p>あ、なんだっけ？</p>
+            <p>あ、そうそう</p>
+            <p>実は～</p>
+            <p>この曲作った時～</p>
+            <p>あの有名な～～</p>
+            <p>世界的にも活躍してる～</p>
+            <p>あ、待って宅急便きた</p>
+            <p>はーい！今行きまーす！！</p>
+            <p>ありがとうございます～</p>
+            <p>あ、なんだっけ？</p>
+            <p>実は～</p>
+            <p>この曲作った時～</p>
+            <p>あの有名な～～</p>
+            <p>世界的にも活躍してる～</p>
+            <p>あ、待って宅急便きた</p>
+            <p>はーい！今行きまーす！！</p>
+            <p>ありがとうございます～</p>
+            <p>あ、なんだっけ？</p>
+            <p>あ、そうそう</p>
+            <p>実は～</p>
+            <p>この曲作った時～</p>
+            <p>あの有名な～～</p>
+            <p>世界的にも活躍してる～</p>
+            <p>あ、待って宅急便きた</p>
+            <p>はーい！今行きまーす！！</p>
+            <p>ありがとうございます～</p>
+            <p>あ、なんだっけ？</p>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="role"></div>
+      <div class="controller">
+        <!-- <p class="spendTime">0:00</p> -->
+        <!-- <p class="remainingTime">3:21</p> -->
+        <div class="controllerBtns">
+          <input id="duration_slider" type="range" onchange="change_duration()" min="0" max="100" value="0">
+          <div onclick="play()">
+            <ion-icon onclick="play()"name="play-outline" class="triangle"></ion-icon>
+          </div>
+          <div onclick="stop()">
+            <ion-icon onclick="stop()" class="square" name="pause-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    
+  </div>
+
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="loading.js"></script>
+  <script type="text/javascript" src="opening.js"></script>
+  <script type="text/javascript" src="libraryBox.js"></script>
+  <script type="text/javascript" src="MusicLibrary.js"></script>
+  <script type="text/javascript" src="function.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  
+  <script src="https://unpkg.com/ionicons@5.1.0/dist/ionicons.js"></script>
+</body>
+</html>

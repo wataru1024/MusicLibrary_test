@@ -1,0 +1,126 @@
+
+.goodbye {
+  animation: goodbye 1s 0s ease-out forwards;
+}
+@keyframes goodbye {
+  0% {
+    opacity: 1;
+    /* display: none; */
+    /* display: none; はanimationできない */
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.light-black {
+  height: 100vh;
+  background-color: rgba(36, 36, 36, 0.425);
+  color: white;
+  text-align: center;
+}
+
+.top-title {
+  position: relative;
+  top: 40vh; 
+  /* 50-(14/2)-3vh */
+  /* https://qiita.com/tiwu_dev/items/797459d9789db4379691より */
+  font-size: 14vh;
+  font-weight: bold;
+  opacity: 0;
+  cursor: default;
+  animation: hello 2s 3.5s ease-out forwards;
+}
+
+
+.im-h,.here-h,.foryou-h {
+  position: fixed;
+  z-index: 1;
+  top: 20vh;
+  right: 5vw;
+  color: white;
+  font-family: 'Microsoft YaHei';
+  font-size: 2vw;
+  opacity: 0;
+}
+
+/* 左上のテキストがホバーで出てくる */
+.im:hover + .im-h {animation: hello 0.5s ease-out forwards; }
+.here:hover + .here-h { animation: hello 0.5s ease-out forwards; }
+.foryou:hover + .foryou-h { animation: hello 0.5s ease-out forwards }
+@keyframes hello {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+/* 
+========================
+BUTTON ONE
+========================
+*/
+.box-1 {
+  position: fixed;
+  bottom: 5vh;
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes hello2 {
+  0% {opacity: 0; cursor: pointer;}
+  100% {opacity: 1; cursor: pointer;}
+}
+.btn-one {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  animation: hello2 2s  ease-out forwards;
+  /* animation: hello2 2s 9s ease-out forwards; */
+  opacity: 0;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+

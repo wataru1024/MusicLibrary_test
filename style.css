@@ -1,0 +1,67 @@
+/*
+Theme Name: MusicLibrary4
+Theme URL: 
+Description: テーマの説明
+Author: 中村航
+Version: 1.0
+Tags: テーマの特徴を表すタグ（カンマ区切り/オプション）
+License: テーマのライセンス
+License URI: テーマのライセンスのURI
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.test {color: aliceblue;}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(library/bgi-8.jpg);
+  background-size: 100vw 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* overflow: scroll; */
+}
+
+.main { display: flex;}
+
+.rightPart {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+}
+.sText {
+  position: relative;
+  z-index: 11;
+  transform: translateX(-20%);
+  -webkit-transform: translateX(-20%);
+
+  font-size: 6vw;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.685);
+}
+
+.title2 {
+  white-space: nowrap;
+}
+
+.role {
+  font-size: 1.2vw;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+h1 ,h2{
+  color: white;
+  text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.473);
+}
+

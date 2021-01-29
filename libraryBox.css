@@ -1,0 +1,130 @@
+
+.library {
+  width: 50vw;
+  height: 0vw;
+  /* ↑ここ最初０にしておかないとダメっぽい */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.137);
+  /* ↑子要素にbackdropがあるとanimationの時に適応されない */
+  position: relative;
+  z-index: 10;
+}
+.library-trigger {
+  width: 5vw;
+  height: 100vh;
+  padding-right: 1vw;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.library-trigger-btn {
+  width: 3vw;
+  height: 3vw;
+  transform: rotate(45deg);
+  border-top: 0.2vw white solid;
+  border-right: 0.2vw white solid;
+  /* position: absolute;
+  right: 2vw;
+  top: 50%; */
+}
+
+.closeLB {
+  animation: close 0.5s ease forwards;
+}
+@keyframes close {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-45vw); }
+}
+.openLB {
+  animation: ope 0.5s ease forwards;
+}
+@keyframes ope {
+  0% { transform: translateX(-45vw); }
+  100% { transform: translateX(0vw); }
+}
+
+.open1 {
+  animation: open1 1.5s forwards ease-out ;
+}
+@keyframes open1 {
+  0% { transform: translateX(-100vw); }
+  100% { transform: translateX(0vw); }
+}
+
+.musics {
+  height: 100%;
+  border-right: rgb(255, 255, 255) solid 3px;
+  padding: 3vw;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+}
+.musics::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
+}
+
+.m {
+  cursor: pointer;
+  margin: 1vw;
+  width: 12vw;
+  height: 12vw;
+  background-color: burlywood;
+  background-size: cover;
+  border: solid 5px white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.568);
+}
+
+.focus {
+  animation: focus 0.2s forwards ease-out;
+  position: relative;
+  /* ↑z-indexつけるため */
+}
+@keyframes focus {
+  0% {transform: scale(1);}
+  100% {
+    transform: scale(1.32);
+    box-shadow: 0 0 15px;
+    z-index: 100;
+  }
+}
+.gray {
+  filter: grayscale(100%);
+  filter: sepia(100%)
+}
+
+#m1:active ,
+#m2:active ,
+#m3:active ,
+#m4:active ,
+#m5:active ,
+#m6:active ,
+#m7:active ,
+#m8:active ,
+#m9:active ,
+#m10:active{
+  border: white 10px solid;
+}
+
+.selected {
+  animation: selected 0.2s forwards ease-in;
+}
+@keyframes selected {
+  0% {
+    opacity: 1;
+    transform: scale(1.32) translateY(0);
+    box-shadow: 0 0 15px;
+    
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.32) translateY(-40px);
+    box-shadow: 0 0 15px;
+  }
+}

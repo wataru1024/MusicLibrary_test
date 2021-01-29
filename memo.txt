@@ -1,0 +1,65 @@
+ワードプレス化を簡単に出来たらいいなあ
+それぞれの曲ごとにurl作りたいなあ
+アルバムの左角に「わた犬」が座っててリズムをとりながら曲を聴いている
+アルバムがクルッと回転するとわた犬も回転して背中側が見える
+しっぽもリズムに乗ってることがわかる
+choose music →
+波紋エフェクト&上下からピタッと
+
+タイトル左上に移動
+
+
+曲検索機能あるといいかも
+
+library
+選択時
+背景―モノクロ・アルバムモノクロ半透明
+選択された物―カラー&1.1倍
+選んでいるときに関係者の名前が出てくるほうがいいと思う！！！！！！！！！！！！！！
+→選ぶ行為に集中できる
+→アルバムをじっくり見るのは曲を聴いているタイミングに見れるようにしよう
+
+
+animationにdisplay:noneは使えないから
+javascriptで1秒ごとに
+
+setInterval('change1()',1000);
+function change1 () {
+  var nowOpacity = new Opa();
+  var nowO = nowOpacity.oso;
+  if (oso === 0) {
+    opening.style.display = "none";
+  }
+}
+
+を実行させたけど上手くいかず
+
+animation二つ付いてると動かない
+
+1.loading {
+  2sec:#js-loaderフェードアウト
+}
+
+2.opening {
+  loadingスタート
+  ↓3.5sec(loading終わりから1.5sec後)
+  2sec:.top-titleフェードイン(hello)
+  ↓ loadingスタートから　sec後(終わりから　sec後)
+  2sec:.btn-one(「Listen Music →」)フェードイン(hello2)
+
+
+  .btn-one Click {
+   1sec:openingフェードアウト(goodbye)
+   ↓3sec
+   opening.style.display = "none";
+   library.style.height = "100vh";
+   library.classList.add('open1');
+  }
+}
+
+3.library {
+
+}
+
+
+なぜm1やm2が使えているのか？？？

@@ -1,0 +1,144 @@
+#duration_slider {
+  display: none;
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: top right;
+  right: 6vw;
+  top: -20vh;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  #duration_slider {
+    display: none;
+    transform: rotate(0);
+    position: absolute;
+    right: 3vw;
+    top: -150px;
+
+  }
+}
+
+.triangle, .square {
+  cursor: pointer;
+  font-size: 3vw;
+  color: white;
+}
+
+.controllerBtns {
+  display: flex;
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+}
+
+.musicImg {
+  display: none;
+  width: 27vw;
+  height: 27vw;
+  border: rgb(255, 255, 255) 1vw solid;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.596);
+  /* position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%); */
+}
+
+.p-card{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  width: 27vw;
+  height: 27vw;
+}
+
+.p-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.p-card__front,
+.p-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.p-card__back{
+  transform: rotateY(180deg);
+  overflow-y: scroll;
+  padding: 2vw;
+  border: whitesmoke 1vw solid;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.596);
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
+}
+.p-card__back::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
+}
+
+.p-card:hover .p-card__inner,
+.p-card:focus .p-card__inner {
+  transform: rotateY(-175deg) scale(1.1);
+}
+
+
+
+
+
+
+/* #duration_slider {
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+} */
+input[type="range"] {
+  -webkit-appearance: none; /* 🚩これ無しだとスタイルがほぼ全く反映されないので注意 */
+  appearance: none;
+  cursor: pointer; 
+  outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
+  height: 2px; /* バーの高さ */
+  width: 40vh; /* バーの幅 */
+  background: #ffffffc7; /* バーの背景色 */
+  /* border-radius: 10px;  */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.644);
+  /* border: solid 3px #dff1ff;  */
+}
+/* WebKit向けのつまみ */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
+  background-color: rgba(255, 255, 255, 0.11);
+  /* background-image: url(library/bgi-2.jpg); */
+  background-size: 100% 100%;
+  width: 20px; /* 幅 */
+  height: 20px; /* 高さ */
+  /* border-radius: 50%;  */
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.603); /* 影 */
+}
+/* Moz向けのつまみ */
+input[type="range"]::-moz-range-thumb {
+  background: #53aeff; /* 背景色 */
+  width: 24px; /* 幅 */
+  height: 24px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  border: none; /* デフォルトの線を消す */
+}
+/* Firefoxで点線が周りに表示されてしまう問題の解消 */
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+/* つまみをドラッグしているときのスタイル */
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: rgba(255, 255, 255, 0.616);
+  box-shadow: 0 0 10px rgba(37, 37, 37, 0.719);
+}
